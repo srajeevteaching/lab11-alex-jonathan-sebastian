@@ -120,7 +120,7 @@ def binary_search_iterative(sorted_list, value):
 #             end - the index of the last element to search to
 # Returns: The index of the value in the list, or -1 if it does not present
 def binary_search_recursive(sorted_list, value, start, end):
-    # Number that takes at least 5 seconds: 3200250
+    # Number which takes at least 5 seconds: 3200250
     # TODO: Implement this function using recursion
 
     if end >= start:
