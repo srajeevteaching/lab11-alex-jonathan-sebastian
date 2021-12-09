@@ -1,4 +1,4 @@
-# Team Names:
+# Team Names: Jonathan, Alex, Sebastian
 # Course: CS151, Dr. Rajeev
 # Lab Number: 11
 # Problem Summary: Compare iterative and recursive implementations of fibonacci
@@ -120,10 +120,21 @@ def binary_search_iterative(sorted_list, value):
 #             end - the index of the last element to search to
 # Returns: The index of the value in the list, or -1 if it does not present
 def binary_search_recursive(sorted_list, value, start, end):
-
+    # Number that takes at least 5 seconds: 3200250
     # TODO: Implement this function using recursion
 
-    return -1
+    if end >= start:
+
+        mid = (end + start) // 2
+
+        if sorted_list[mid] == value:
+            return mid
+
+        elif sorted_list[mid] > value:
+            return binary_search_recursive(sorted_list, value, start, mid - 1)
+
+        else:
+            return -1
 
 
 # ------------------------------------------------------------------------------
